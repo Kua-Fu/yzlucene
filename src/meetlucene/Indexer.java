@@ -56,6 +56,7 @@ public class Indexer {
                         Version.LUCENE_30), // 3
                 true, // 3
                 IndexWriter.MaxFieldLength.UNLIMITED); // 3
+        writer.setUseCompoundFile(false); // 不使用默认的复合文件
     }
 
     public void close() throws IOException {

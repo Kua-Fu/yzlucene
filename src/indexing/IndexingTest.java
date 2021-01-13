@@ -46,6 +46,7 @@ public class IndexingTest extends TestCase {
     directory = new RAMDirectory();
 
     IndexWriter writer = getWriter(); // 2
+    writer.setInfoStream(System.out); // 显示索引过程信息
 
     for (int i = 0; i < ids.length; i++) { // 3
       Document doc = new Document();
